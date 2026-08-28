@@ -1,0 +1,35 @@
+/* HERO SECTION (página Sobre) */
+
+.hero {
+    margin-top: 86px;  /* mantido do seu cálculo: distância entre o fim do header e o topo da foto no Figma */
+    margin-left: 55px;
+    margin-right: 56px;
+    width: 1329px;
+    overflow: hidden; /* garante que a section "contenha" o float, evitando que o layout quebre depois dela */
+}
+
+.img {
+    float: left; /* isso é o que faz o texto contornar a foto — sem isso, viram blocos empilhados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 521px;
+    height: 295px;
+    margin-right: 30px; /* calculado no Figma: 606.46 - (55 + 521) */
+    background-color: lightblue; /* placeholder visual — trocar depois pela imagem real */
+}
+
+.hero p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; /* ajuste pro valor real do Figma quando tiver */
+    line-height: 1.5;
+    color: black;
+    margin: 0 0 1em 0; /* espaço entre parágrafos — ajuste se tiver valor exato do Figma */
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-right: 30px;
+    margin-top: 83px;
+}

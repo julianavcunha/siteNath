@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+:root {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+/* CONTAINER: trava a largura de referência do Figma (1440px),
+   centraliza o conteúdo em telas maiores e evita que os valores
+   absolutos (margin/padding em px) desalinhem em telas diferentes */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* trocado de "center": agora controlamos o Y manualmente via valores do Figma */
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0; /* removido o padding genérico; os Y exatos vêm de dentro de cada bloco agora */
+}
+
+.title h1 {
+    margin-top: 79px;   /* Y do h1 no Figma */
+    margin-left: 54px;  /* X do h1 no Figma (~55) */
+    font-family: 'Inter', sans-serif;
+    font-size: 24.5px;
+    font-weight: 900;   /* "Black" no Figma = peso 900, não 100 */
+    line-height: normal;
+    letter-spacing: 0;
+    color: black;
+}
+
+/* NAV WRAPPER: stacks bandeiras+contraste (navlang) on top of navbar, aligned right */
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* pushes both rows to the right edge */
+    margin-top: 25px; /* Y das bandeiras (.navlang) no Figma */
+    gap: 2px;
+    padding-right: 71px; /* distância real (Figma) da borda direita do círculo do toggle até a borda da página */
+}
+
+.navlang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 47px; /* espaço entre o bloco de bandeiras (<ol>) e o .contrast, confirmado no Figma */
+    margin-bottom: 0;
+    margin-right: 70px;
+    padding: 0;
+}
+
+.navlang ol {
+    display: flex;
+    flex-direction: row;
+    gap: 16px; /* confirmado no Figma (medição direta) */
+    list-style: none;
+}
+
+/* Regra genérica "img" removida — estava afetando bandeiras sem querer */
+.navlang ol img {
+    width: 13px;
+    height: 9px;
+    /* sem padding — o gap:16px do <ol> já cuida do espaçamento */
+}
+
+.icon-links img {
+    padding-right: 3px;
+    padding-left: 11px; /* mantido só aqui, se for intencional pros ícones sociais */
+}
+
+ol li {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: black;
+}
+
+/* CONTRASTE: ícone de toggle + texto, ao lado das bandeiras */
+.contrast a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* ajuste se o Figma tiver um valor específico entre o texto e o círculo */
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.contrast img {
+    width: 16px;  /* confirmado no Figma: 16x16 */
+    height: 16px;
+    padding: 0; /* sobrescreve o padding genérico da regra "img" acima, que era pro ícone de bandeira */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 30px; /* calculado a partir das posições X do Figma (Sobre/Projetos/Perguntas/Contato) */
+    list-style: none;
+    height: auto;
+}
+
+ul li {
+    font-family: 'Inter', sans-serif;
+    font-size: 20.45px; /* confirmado, já estava certo */
+    font-weight: 400; /* "Regular" no Figma */
+    line-height: normal;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon-links {
+    display: inline-flex;
+    flex-direction: row;
+    text-align: center;
+    padding-right: 30px;
+    padding-left: 15px;
+    gap: 10px;
+}
+
+.icon-links #linkedin,
+.icon-links #lattes,
+.icon-links #behance {
+    width: 24.5px;
+    height: 24.5px;
+}
