@@ -21,17 +21,33 @@
     white-space: nowrap;
 }
 
-.pagina-contato .nav-wrapper,
-.pagina-contato .navlang,
-.pagina-contato .navbar {
+.pagina-contato .nav-wrapper {
+    position: absolute;
+    top: 25px;
+    right: 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 28px;
+    box-sizing: border-box;
+    width: min(592px, calc(100% - 360px));
+    margin: 0;
+    padding-right: 0;
+    padding-top: 6px;
+}
+
+.pagina-contato .navlang {
     position: static;
-    display: contents;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 61px;
+    margin: 0 15px 0 0;
+    padding: 0;
 }
 
 .pagina-contato .navlang ol {
-    position: absolute;
-    top: 33px;
-    left: 1089px;
+    position: static;
     display: flex;
     align-items: center;
     gap: 9px;
@@ -55,9 +71,7 @@
 }
 
 .pagina-contato .contrast {
-    position: absolute;
-    top: 33px;
-    right: 71px;
+    position: static;
 }
 
 .pagina-contato .contrast a {
@@ -73,10 +87,20 @@
     height: 16px;
 }
 
+.pagina-contato .navbar {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 53px;
+    width: 100%;
+}
+
+.pagina-contato .navbar nav {
+    flex: 0 0 431px;
+}
+
 .pagina-contato .navbar ul {
-    position: absolute;
-    top: 79px;
-    left: 792px;
+    position: static;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -111,12 +135,11 @@
 }
 
 .pagina-contato .icon-links {
-    position: absolute;
-    top: 79px;
-    left: 1276px;
+    position: static;
     display: flex;
     align-items: center;
     gap: 18.5px;
+    flex: 0 0 108px;
     padding: 0;
 }
 
@@ -356,6 +379,12 @@
     .pagina-contato .navbar {
         flex-wrap: wrap;
         gap: 16px;
+    }
+
+    .pagina-contato .navbar nav {
+        flex: 0 1 431px;
+        max-width: 100%;
+        min-width: 0;
     }
 
     .pagina-contato .navbar ul {
