@@ -1,0 +1,468 @@
+@charset "UTF-8";
+
+.pagina-contato {
+    min-height: 2048px;
+    margin: 0;
+    background-color: #f9f7f7;
+}
+
+.pagina-contato header {
+    position: relative;
+    display: block;
+    height: 130px;
+}
+
+.pagina-contato .title h1 {
+    position: absolute;
+    top: 79px;
+    left: 55px;
+    width: 267px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.pagina-contato .nav-wrapper,
+.pagina-contato .navlang,
+.pagina-contato .navbar {
+    position: static;
+    display: contents;
+}
+
+.pagina-contato .navlang ol {
+    position: absolute;
+    top: 33px;
+    left: 1089px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagina-contato .navlang ol li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.pagina-contato .navlang ol img {
+    display: block;
+    width: auto;
+    height: 9px;
+}
+
+.pagina-contato .contrast {
+    position: absolute;
+    top: 33px;
+    right: 71px;
+}
+
+.pagina-contato .contrast a {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.pagina-contato .contrast img {
+    width: 16px;
+    height: 16px;
+}
+
+.pagina-contato .navbar ul {
+    position: absolute;
+    top: 79px;
+    left: 792px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pagina-contato .navbar li {
+    height: 25px;
+}
+
+.pagina-contato .navbar li:nth-child(1) {
+    width: 70px;
+}
+
+.pagina-contato .navbar li:nth-child(2) {
+    width: 86px;
+}
+
+.pagina-contato .navbar li:nth-child(3) {
+    width: 104px;
+}
+
+.pagina-contato .navbar li:nth-child(4) {
+    width: 81px;
+}
+
+.pagina-contato .navbar li a {
+    display: block;
+}
+
+.pagina-contato .icon-links {
+    position: absolute;
+    top: 79px;
+    left: 1276px;
+    display: flex;
+    align-items: center;
+    gap: 18.5px;
+    padding: 0;
+}
+
+.pagina-contato .icon-links a {
+    display: block;
+    padding: 0;
+    line-height: 0;
+}
+
+.pagina-contato .icon-links img {
+    display: block;
+    width: 24.5px;
+    height: 24.5px;
+    padding: 0;
+    object-fit: contain;
+}
+
+.pagina-contato .icon-links #lattes {
+    width: 22px;
+    height: 28px;
+}
+
+.contato {
+    box-sizing: border-box;
+    width: min(1228px, calc(100% - 48px));
+    margin: 52px auto 0;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+.contato h2,
+.contato-alternativo,
+.redes-sociais h3 {
+    box-sizing: border-box;
+    width: min(736px, 100%);
+    height: 36px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateX(6px);
+    color: #000;
+    font-size: 24.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.contato h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.contato-intro,
+.email-contato,
+.campo label {
+    display: block;
+    height: 36px;
+    margin: 0;
+    color: #000;
+    font-size: 24.5px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.contato-intro {
+    margin-top: 42px;
+}
+
+.link-formulario {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    min-height: 148px;
+    margin-top: 48px;
+    padding: 38px;
+    border: 1px solid #0e0e0e;
+    background-color: #d9d9d9;
+    color: #042cf6;
+    font-size: 24.5px;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.contato-alternativo {
+    margin-top: 38px;
+    margin-bottom: 0;
+}
+
+.email-contato {
+    width: fit-content;
+    margin-top: 28px;
+    text-decoration: none;
+}
+
+.formulario-contato {
+    margin: 0;
+}
+
+.campo {
+    min-width: 0;
+}
+
+.campo-nome {
+    width: calc((100% - 82px) / 2);
+    margin-top: 46px;
+}
+
+.campo input,
+.campo textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top: 34px;
+    padding: 12px;
+    border: 1px solid #0e0e0e;
+    border-radius: 0;
+    background-color: #d9d9d9;
+    color: #000;
+    font: 300 20px/1.4 'Inter', sans-serif;
+}
+
+.campo input {
+    height: 68px;
+}
+
+.campos-em-linha {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 82px;
+    margin-top: 35px;
+}
+
+.campo-mensagem {
+    margin-top: 66px;
+}
+
+.campo textarea {
+    height: 531px;
+    resize: vertical;
+}
+
+.redes-sociais {
+    margin-top: 76px;
+}
+
+.redes-sociais h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.links-sociais {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 149px;
+    width: min(868px, 100%);
+    margin: 51px auto 0;
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    color: #000;
+    font-size: 20.45px;
+    line-height: 26px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.link-social img {
+    display: block;
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+    .pagina-contato {
+        min-height: 100vh;
+    }
+
+    .pagina-contato header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        height: auto;
+    }
+
+    .pagina-contato .title {
+        flex: auto;
+        width: 100%;
+    }
+
+    .pagina-contato .title h1 {
+        position: static;
+        width: auto;
+        margin: 24px auto 0;
+        text-align: center;
+    }
+
+    .pagina-contato .nav-wrapper,
+    .pagina-contato .navlang,
+    .pagina-contato .navbar {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagina-contato .nav-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pagina-contato .navlang {
+        gap: 16px;
+    }
+
+    .pagina-contato .navlang ol {
+        position: static;
+        gap: 10px;
+    }
+
+    .pagina-contato .contrast {
+        position: static;
+    }
+
+    .pagina-contato .navbar {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .pagina-contato .navbar ul {
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .pagina-contato .navbar li,
+    .pagina-contato .navbar li:nth-child(n) {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+    }
+
+    .pagina-contato .icon-links {
+        position: static;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .contato {
+        width: calc(100% - 40px);
+        margin-top: 36px;
+    }
+
+    .contato-intro,
+    .email-contato,
+    .campo label {
+        font-size: 20px;
+    }
+
+    .link-formulario {
+        min-height: 120px;
+        padding: 24px;
+        font-size: 20px;
+    }
+
+    .campo-nome {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .campos-em-linha {
+        gap: 24px;
+    }
+
+    .links-sociais {
+        gap: 24px;
+    }
+
+    .link-social {
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .link-social img {
+        flex-basis: 44px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-contato .navlang {
+        flex-wrap: wrap;
+    }
+
+    .contato {
+        width: calc(100% - 32px);
+    }
+
+    .contato h2,
+    .contato-alternativo,
+    .redes-sociais h3 {
+        transform: none;
+    }
+
+    .contato-intro,
+    .email-contato,
+    .campo label,
+    .link-formulario {
+        font-size: 16px;
+    }
+
+    .link-formulario {
+        min-height: 100px;
+        padding: 18px;
+    }
+
+    .campo-nome {
+        width: 100%;
+    }
+
+    .campos-em-linha,
+    .links-sociais {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .campo textarea {
+        height: 260px;
+    }
+
+    .link-social {
+        font-size: 16px;
+    }
+}
