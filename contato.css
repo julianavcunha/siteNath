@@ -1,21 +1,5 @@
-/* CONTAINER: trava a largura de referência do Figma (1440px),
-   centraliza o conteúdo em telas maiores e evita que os valores
-   absolutos (margin/padding em px) desalinhem em telas diferentes */
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-/* HEADER */
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* trocado de "center": agora controlamos o Y manualmente via valores do Figma */
-    justify-content: space-between;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0; /* removido o padding genérico; os Y exatos vêm de dentro de cada bloco agora */
+.pagina-contato {
+    background-color: #f9f7f7;
 }
 
 .contato h2,
@@ -169,94 +153,6 @@ header {
 }
 
 @media (max-width: 1200px) {
-    .pagina-contato {
-        min-height: 100vh;
-    }
-
-    .pagina-contato header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        height: auto;
-    }
-
-    .pagina-contato .title {
-        flex: auto;
-        width: 100%;
-    }
-
-    .pagina-contato .title h1 {
-        position: static;
-        width: auto;
-        margin: 24px auto 0;
-        text-align: center;
-    }
-
-    .pagina-contato .nav-wrapper,
-    .pagina-contato .navlang,
-    .pagina-contato .navbar {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .pagina-contato .nav-wrapper {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .pagina-contato .navlang {
-        gap: 16px;
-    }
-
-    .pagina-contato .navlang ol {
-        position: static;
-        gap: 10px;
-    }
-
-    .pagina-contato .contrast {
-        position: static;
-    }
-
-    .pagina-contato .navbar {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .pagina-contato .navbar nav {
-        flex: 0 1 431px;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .pagina-contato .navbar ul {
-        position: static;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px 20px;
-        width: 100%;
-        height: auto;
-    }
-
-    .pagina-contato .navbar li,
-    .pagina-contato .navbar li:nth-child(n) {
-        width: auto;
-        height: auto;
-        font-size: 16px;
-    }
-
-    .pagina-contato .icon-links {
-        position: static;
-        gap: 16px;
-        padding: 0;
-    }
-
     .contato {
         width: calc(100% - 40px);
         margin-top: 36px;
@@ -299,10 +195,6 @@ header {
 }
 
 @media (max-width: 600px) {
-    .pagina-contato .navlang {
-        flex-wrap: wrap;
-    }
-
     .contato {
         width: calc(100% - 32px);
     }

@@ -1,149 +1,282 @@
 @charset "UTF-8";
 
-:root {
-    margin: 0 auto;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    background-color: #FFFFFF;
 }
 
-/* CONTAINER: trava a largura de referência do Figma (1440px),
-   centraliza o conteúdo em telas maiores e evita que os valores
-   absolutos (margin/padding em px) desalinhem em telas diferentes */
+html {
+    min-height: 100%;
+    scrollbar-gutter: stable;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
 .container {
+    width: 100%;
     max-width: 1440px;
+    min-height: 100vh;
     margin: 0 auto;
 }
-
-/* HEADER */
 
 header {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* trocado de "center": agora controlamos o Y manualmente via valores do Figma */
     justify-content: space-between;
-    box-sizing: border-box;
     width: 100%;
-    padding: 0; /* removido o padding genérico; os Y exatos vêm de dentro de cada bloco agora */
+    height: 130px;
+}
+
+.title {
+    flex: 0 0 auto;
 }
 
 .title h1 {
-    margin-top: 79px;   /* Y do h1 no Figma */
-    margin-left: 54px;  /* X do h1 no Figma (~55) */
+    margin: 79px 0 0 54px;
+    color: #000;
     font-family: 'Inter', sans-serif;
     font-size: 24.5px;
-    font-weight: 900;   /* "Black" no Figma = peso 900, não 100 */
+    font-weight: 900;
     line-height: normal;
     letter-spacing: 0;
-    color: black;
+    white-space: nowrap;
 }
 
-/* NAV WRAPPER: stacks bandeiras+contraste (navlang) on top of navbar, aligned right */
 .nav-wrapper {
+    position: absolute;
+    top: 25px;
+    right: 56px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* pushes both rows to the right edge */
-    margin-top: 25px; /* Y das bandeiras (.navlang) no Figma */
-    gap: 2px;
-    padding-right: 71px; /* distância real (Figma) da borda direita do círculo do toggle até a borda da página */
+    align-items: flex-end;
+    gap: 29px;
+    width: min(592px, calc(100% - 360px));
+    margin: 0;
+    padding: 5px 0 0;
 }
 
 .navlang {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 47px; /* espaço entre o bloco de bandeiras (<ol>) e o .contrast, confirmado no Figma */
-    margin-bottom: 0;
-    margin-right: 70px;
+    gap: 61px;
+    margin: 0 15px 0 0;
     padding: 0;
 }
 
 .navlang ol {
     display: flex;
     flex-direction: row;
-    gap: 16px; /* confirmado no Figma (medição direta) */
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-/* Regra genérica "img" removida — estava afetando bandeiras sem querer */
-.navlang ol img {
-    width: 13px;
-    height: 9px;
-    /* sem padding — o gap:16px do <ol> já cuida do espaçamento */
-}
-
-.icon-links img {
-    padding-right: 3px;
-    padding-left: 11px; /* mantido só aqui, se for intencional pros ícones sociais */
-}
-
-ol li {
+.navlang ol li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 0;
+    color: #000;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
-    color: black;
+    white-space: nowrap;
 }
 
-/* CONTRASTE: ícone de toggle + texto, ao lado das bandeiras */
+.navlang ol img {
+    display: block;
+    width: auto;
+    height: 9px;
+}
+
 .contrast a {
     display: inline-flex;
     align-items: center;
-    gap: 5px; /* ajuste se o Figma tiver um valor específico entre o texto e o círculo */
-    text-decoration: none;
-    color: #000000;
+    gap: 8px;
+    color: #000;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .contrast img {
-    width: 16px;  /* confirmado no Figma: 16x16 */
+    width: 16px;
     height: 16px;
-    padding: 0; /* sobrescreve o padding genérico da regra "img" acima, que era pro ícone de bandeira */
+    padding: 0;
 }
 
 .navbar {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 53px;
+    width: 100%;
+}
+
+.navbar nav {
+    flex: 0 0 431px;
 }
 
 .navbar ul {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 30px; /* calculado a partir das posições X do Figma (Sobre/Projetos/Perguntas/Contato) */
+    gap: 30px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    height: auto;
 }
 
-ul li {
+.navbar li {
+    height: 25px;
     font-family: 'Inter', sans-serif;
-    font-size: 20.45px; /* confirmado, já estava certo */
-    font-weight: 400; /* "Regular" no Figma */
+    font-size: 20.45px;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 0;
     text-align: center;
 }
 
-ul li a {
+.navbar li:nth-child(1) {
+    width: 70px;
+}
+
+.navbar li:nth-child(2) {
+    width: 86px;
+}
+
+.navbar li:nth-child(3) {
+    width: 104px;
+}
+
+.navbar li:nth-child(4) {
+    width: 81px;
+}
+
+.navbar li a {
+    display: block;
+    color: #000;
     text-decoration: none;
-    color: black;
 }
 
 .icon-links {
     display: inline-flex;
+    flex: 0 0 108px;
     flex-direction: row;
+    align-items: center;
+    gap: 18.5px;
+    padding: 0;
     text-align: center;
-    padding-right: 30px;
-    padding-left: 15px;
-    gap: 10px;
 }
 
-.icon-links #linkedin,
-.icon-links #lattes,
-.icon-links #behance {
+.icon-links a {
+    display: block;
+    padding: 0;
+    line-height: 0;
+}
+
+.icon-links img {
+    display: block;
     width: 24.5px;
     height: 24.5px;
+    padding: 0;
+    object-fit: contain;
+}
+
+.icon-links #lattes {
+    width: 22px;
+    height: 28px;
+}
+
+@media (max-width: 1200px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .title h1 {
+        margin: 24px auto 0;
+        text-align: center;
+    }
+
+    .nav-wrapper,
+    .navlang,
+    .navbar {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .navlang {
+        gap: 16px;
+    }
+
+    .navlang ol {
+        gap: 10px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .navbar nav {
+        flex: 0 1 431px;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar li,
+    .navbar li:nth-child(n) {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+    }
+
+    .icon-links {
+        flex: 0 0 auto;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navlang {
+        flex-wrap: wrap;
+    }
 }

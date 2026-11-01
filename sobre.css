@@ -1,30 +1,29 @@
 /* HERO SECTION (página Sobre) */
 
 .hero {
-    margin-top: 86px;  /* mantido do seu cálculo: distância entre o fim do header e o topo da foto no Figma */
-    margin-left: 55px;
-    margin-right: 56px;
-    width: 1329px;
-    overflow: hidden; /* garante que a section "contenha" o float, evitando que o layout quebre depois dela */
+    box-sizing: border-box;
+    width: min(1329px, calc(100% - 110px));
+    margin: 86px auto 0;
+    overflow: hidden;
 }
 
 .img {
-    float: left; /* isso é o que faz o texto contornar a foto — sem isso, viram blocos empilhados */
+    float: left;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 521px;
+    width: min(521px, 45%);
     height: 295px;
-    margin-right: 30px; /* calculado no Figma: 606.46 - (55 + 521) */
-    background-color: lightblue; /* placeholder visual — trocar depois pela imagem real */
+    margin-right: 30px;
+    background-color: lightblue;
 }
 
 .hero p {
     font-family: 'Inter', sans-serif;
-    font-size: 16px; /* ajuste pro valor real do Figma quando tiver */
+    font-size: 16px;
     line-height: 1.5;
     color: black;
-    margin: 0 0 1em 0; /* espaço entre parágrafos — ajuste se tiver valor exato do Figma */
+    margin: 0 0 1em;
 }
 
 button {
@@ -32,4 +31,24 @@ button {
     font-size: 16px;
     margin-right: 30px;
     margin-top: 83px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        width: calc(100% - 32px);
+        margin-top: 40px;
+    }
+
+    .img {
+        float: none;
+        width: 100%;
+        max-width: 521px;
+        height: min(295px, 60vw);
+        margin: 0 auto 24px;
+    }
+
+    .hero button {
+        max-width: 100%;
+        margin: 24px 0 0;
+    }
 }
