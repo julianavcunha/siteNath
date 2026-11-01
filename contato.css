@@ -1,173 +1,21 @@
-@charset "UTF-8";
-
-.pagina-contato {
-    min-height: 2048px;
-    margin: 0;
-    background-color: #f9f7f7;
+/* CONTAINER: trava a largura de referência do Figma (1440px),
+   centraliza o conteúdo em telas maiores e evita que os valores
+   absolutos (margin/padding em px) desalinhem em telas diferentes */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
-.pagina-contato header {
-    position: relative;
-    display: block;
-    height: 130px;
-}
+/* HEADER */
 
-.pagina-contato .title h1 {
-    position: absolute;
-    top: 79px;
-    left: 55px;
-    width: 267px;
-    margin: 0;
-    white-space: nowrap;
-}
-
-.pagina-contato .nav-wrapper {
-    position: absolute;
-    top: 25px;
-    right: 41px;
+header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 28px;
+    flex-direction: row;
+    align-items: flex-start; /* trocado de "center": agora controlamos o Y manualmente via valores do Figma */
+    justify-content: space-between;
     box-sizing: border-box;
-    width: min(592px, calc(100% - 360px));
-    margin: 0;
-    padding-right: 0;
-    padding-top: 6px;
-}
-
-.pagina-contato .navlang {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 61px;
-    margin: 0 15px 0 0;
-    padding: 0;
-}
-
-.pagina-contato .navlang ol {
-    position: static;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.pagina-contato .navlang ol li {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    padding: 0;
-    white-space: nowrap;
-}
-
-.pagina-contato .navlang ol img {
-    display: block;
-    width: auto;
-    height: 9px;
-}
-
-.pagina-contato .contrast {
-    position: static;
-}
-
-.pagina-contato .contrast a {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    white-space: nowrap;
-}
-
-.pagina-contato .contrast img {
-    width: 16px;
-    height: 16px;
-}
-
-.pagina-contato .navbar {
-    position: static;
-    display: flex;
-    align-items: center;
-    gap: 53px;
     width: 100%;
-}
-
-.pagina-contato .navbar nav {
-    flex: 0 0 431px;
-}
-
-.pagina-contato .navbar ul {
-    position: static;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    height: 25px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.pagina-contato .navbar li {
-    height: 25px;
-}
-
-.pagina-contato .navbar li:nth-child(1) {
-    width: 70px;
-}
-
-.pagina-contato .navbar li:nth-child(2) {
-    width: 86px;
-}
-
-.pagina-contato .navbar li:nth-child(3) {
-    width: 104px;
-}
-
-.pagina-contato .navbar li:nth-child(4) {
-    width: 81px;
-}
-
-.pagina-contato .navbar li a {
-    display: block;
-}
-
-.pagina-contato .icon-links {
-    position: static;
-    display: flex;
-    align-items: center;
-    gap: 18.5px;
-    flex: 0 0 108px;
-    padding: 0;
-}
-
-.pagina-contato .icon-links a {
-    display: block;
-    padding: 0;
-    line-height: 0;
-}
-
-.pagina-contato .icon-links img {
-    display: block;
-    width: 24.5px;
-    height: 24.5px;
-    padding: 0;
-    object-fit: contain;
-}
-
-.pagina-contato .icon-links #lattes {
-    width: 22px;
-    height: 28px;
-}
-
-.contato {
-    box-sizing: border-box;
-    width: min(1228px, calc(100% - 48px));
-    margin: 52px auto 0;
-    color: #000;
-    font-family: 'Inter', sans-serif;
+    padding: 0; /* removido o padding genérico; os Y exatos vêm de dentro de cada bloco agora */
 }
 
 .contato h2,
