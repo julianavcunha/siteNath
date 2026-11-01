@@ -1,18 +1,5 @@
 /* HERO SECTION (página Sobre) */
 
-
-.logo {
-    flex: 0 0 auto;
-    width: 250px;
-    margin: 79px 0 0 54px;
-}
-
-.logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 .hero {
     box-sizing: border-box;
     width: min(1329px, calc(100% - 110px));
