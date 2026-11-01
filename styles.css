@@ -54,17 +54,7 @@ header {
     height: 130px;
 }
 
-.logo {
-    flex: 0 0 auto;
-    width: 250px;
-    margin: 79px 0 0 54px;
-}
 
-.logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
 .nav-wrapper {
     position: absolute;
