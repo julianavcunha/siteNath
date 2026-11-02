@@ -6,6 +6,7 @@
 .contato {
     width: min(868px, calc(100% - 32px));
     margin: 0 auto;
+    padding-bottom: 48px;
 }
 
 .contato h2,
@@ -135,7 +136,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 149px;
     width: min(868px, 100%);
-    margin: 51px auto 0;
+    margin: 24px auto 0;
 }
 
 .link-social {

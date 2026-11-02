@@ -68,12 +68,13 @@ header {
 .nav-wrapper {
     position: absolute;
     top: 25px;
-    right: 56px;
+    right: 40px;
+    left: 360px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 29px;
-    width: min(592px, calc(100% - 360px));
+    gap: 34px;
+    width: auto;
     margin: 0;
     padding: 5px 0 0;
 }
@@ -136,19 +137,20 @@ header {
 .navbar {
     display: flex;
     align-items: flex-start;
-    gap: 53px;
+    gap: 24px;
     width: 100%;
 }
 
 .navbar nav {
-    flex: 0 0 431px;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .navbar ul {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 30px;
+    gap: 12px;
     height: 25px;
     margin: 0;
     padding: 0;
@@ -156,6 +158,8 @@ header {
 }
 
 .navbar li {
+    flex: 0 0 auto;
+    width: auto;
     height: 25px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20.45px;
@@ -163,22 +167,6 @@ header {
     line-height: normal;
     letter-spacing: 0;
     text-align: center;
-}
-
-.navbar li:nth-child(1) {
-    width: 70px;
-}
-
-.navbar li:nth-child(2) {
-    width: 86px;
-}
-
-.navbar li:nth-child(3) {
-    width: 104px;
-}
-
-.navbar li:nth-child(4) {
-    width: 81px;
 }
 
 .navbar li a {
