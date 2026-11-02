@@ -55,13 +55,14 @@
     min-height: 148px;
     margin-top: 48px;
     padding: 30px;
-    border: 1px solid #0e0e0e;
-    background-color: #d9d9d9;
+    background-color: rgba(222, 224, 227, 0.85);
+    opacity: 0.85;
     color: #042cf6;
     font-size: 24.5px;
     font-weight: 300;
     line-height: normal;
     text-decoration: none;
+    border-radius: 12px;
 }
 
 .contato-alternativo {
@@ -95,9 +96,10 @@
     width: 100%;
     margin-top: 34px;
     padding: 12px;
-    border: 1px solid #0e0e0e;
-    border-radius: 0;
-    background-color: #d9d9d9;
+    border: 0;
+    background-color: rgba(222, 224, 227, 0.85);
+    opacity: 0.85;
+    border-radius: 12px;
     color: #000;
     font: 300 20px/1.4 'Public Sans', sans-serif;
 }
