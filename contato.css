@@ -3,6 +3,11 @@
     background-color: #f9f7f7;
 }
 
+.contato {
+    width: min(868px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
 .contato h2,
 .contato-alternativo,
 .redes-sociais h3 {
@@ -155,8 +160,8 @@
 
 @media (max-width: 1200px) {
     .contato {
-        width: calc(100% - 40px);
-        margin-top: 36px;
+        width: min(868px, calc(100% - 40px));
+        margin: 36px auto 0;
     }
 
     .contato-intro,
@@ -198,6 +203,7 @@
 @media (max-width: 600px) {
     .contato {
         width: calc(100% - 32px);
+        margin-top: 36px;
     }
 
     .contato h2,
