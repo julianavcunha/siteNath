@@ -23,7 +23,7 @@
     font-family: 'Public Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: black;
+    color: black; /* definir cinza escuro */
     margin: 0 0 1em;
 }
 
