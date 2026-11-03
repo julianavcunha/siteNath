@@ -5,8 +5,9 @@
 
 .contato {
     width: min(868px, calc(100% - 32px));
-    margin: 0 auto;
-    padding-bottom: 48px;
+    margin: 0;
+    padding: 0 12px 48px;
+    box-sizing: border-box;
 }
 
 .contato h2,
@@ -29,23 +30,38 @@
 .contato h2 {
     margin-top: 30px;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.contato-alternativo,
+.redes-sociais h3 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    transform: none;
+    text-align: left;
 }
 
 .contato-intro,
 .email-contato,
 .campo label {
     display: block;
-    height: 36px;
+    height: auto;
     margin: 0;
     color: #000;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: 1.3;
 }
 
 .contato-intro {
     margin-top: 42px;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 0;
 }
 
 .link-formulario {
@@ -77,6 +93,7 @@
 }
 
 .formulario-contato {
+    width: calc(100% - 24px);
     margin: 0;
 }
 
@@ -85,7 +102,7 @@
 }
 
 .campo-nome {
-    width: calc((100% - 82px) / 2);
+    width: 100%;
     margin-top: 46px;
 }
 
@@ -94,7 +111,7 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
-    margin-top: 34px;
+    margin-top: 8px;
     padding: 12px;
     border: 0;
     background-color: rgba(222, 224, 227, 0.85);
@@ -112,6 +129,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 82px;
+    width: 100%;
     margin-top: 35px;
 }
 
@@ -164,7 +182,7 @@
 @media (max-width: 1200px) {
     .contato {
         width: min(868px, calc(100% - 40px));
-        margin: 36px auto 0;
+        margin: 36px 0 0;
     }
 
     .contato-intro,
@@ -206,7 +224,7 @@
 @media (max-width: 600px) {
     .contato {
         width: calc(100% - 32px);
-        margin-top: 36px;
+        margin: 36px 0 0;
     }
 
     .contato h2,
