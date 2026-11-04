@@ -28,11 +28,26 @@
     margin: 0 0 1em;
 }
 
-button {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
+.hero button {
+    box-sizing: border-box;
+    min-height: 68px;
+    padding: 12px;
+    border: 0;
+    border-radius: 12px;
+    background-color: rgba(222, 224, 227, 0.85);
+    opacity: 0.85;
+    color: #000;
+    font: 300 20px/1.4 'Public Sans', sans-serif;
+    cursor: pointer;
     margin-right: 30px;
     margin-top: 8px;
+}
+
+.hero button:focus {
+    background-color: #dee0e3;
+    opacity: 1;
+    outline: none;
+    box-shadow: none;
 }
 
 @media (max-width: 700px) {

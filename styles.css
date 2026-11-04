@@ -101,13 +101,21 @@ header {
 .navlang ol li {
     display: flex;
     align-items: center;
-    gap: 3px;
     padding: 0;
     color: #42464D;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 11px;
+    line-height: 1;
     white-space: nowrap;
+}
+
+.navlang ol li a {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: inherit;
+    text-decoration: none;
 }
 
 .navlang ol img {

@@ -4,9 +4,9 @@
 }
 
 .contato {
-    width: min(868px, calc(100% - 32px));
+    width: 100%;
     margin: 0;
-    padding: 0 12px 48px;
+    padding: 0 54px 48px;
     box-sizing: border-box;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .formulario-contato {
-    width: calc(100% - 24px);
+    width: 100%;
     margin: 0;
 }
 
@@ -119,6 +119,14 @@
     border-radius: 12px;
     color: #000;
     font: 300 20px/1.4 'Public Sans', sans-serif;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    background-color: #dee0e3;
+    opacity: 1;
+    outline: none;
+    box-shadow: none;
 }
 
 .campo input {
@@ -149,6 +157,7 @@
 .redes-sociais h3 {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .links-sociais {
@@ -181,8 +190,9 @@
 
 @media (max-width: 1200px) {
     .contato {
-        width: min(868px, calc(100% - 40px));
+        width: 100%;
         margin: 36px 0 0;
+        padding: 0 32px 48px;
     }
 
     .contato-intro,
@@ -198,7 +208,7 @@
     }
 
     .campo-nome {
-        width: calc((100% - 24px) / 2);
+        width: 100%;
     }
 
     .campos-em-linha {
@@ -223,8 +233,9 @@
 
 @media (max-width: 600px) {
     .contato {
-        width: calc(100% - 32px);
+        width: 100%;
         margin: 36px 0 0;
+        padding: 0 16px 48px;
     }
 
     .contato h2,
