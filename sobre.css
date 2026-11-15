@@ -29,6 +29,8 @@
 }
 
 .hero button {
+    display: inline-flex;
+    align-items: center;
     box-sizing: border-box;
     min-height: 68px;
     padding: 12px;
@@ -41,6 +43,18 @@
     cursor: pointer;
     margin-right: 30px;
     margin-top: 8px;
+}
+
+.hero button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.hero button a {
+    text-decoration: none;
+    color: #000;
 }
 
 .hero button:focus {
