@@ -1,0 +1,68 @@
+.testimonials {
+    width: min(1050px, calc(100% - 48px));
+    margin: 86px auto 0;
+    padding-bottom: 48px;
+}
+
+.testimonials h1 {
+    margin: 0 0 32px;
+    color: #42464D;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.gallery {
+    border-radius: 12px;
+    background: rgba(222, 224, 227, 0.45);
+}
+
+.gallery-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66%;
+    min-height: 220px;
+    margin-right: 16px;
+    padding: 28px;
+    border-radius: 12px;
+    background: rgba(222, 224, 227, 0.60);
+    text-align: center;
+}
+
+.gallery-cell blockquote {
+    margin: 0;
+}
+
+.gallery-cell p {
+    margin: 0 0 20px;
+    color: #42464D;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 15px;
+    font-style:italic;
+    line-height: 1.5;
+}
+
+.gallery-cell cite {
+    color: #42464D;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+@media (max-width: 700px) {
+    .testimonials {
+        margin-top: 40px;
+    }
+
+    .gallery-cell {
+        width: 88%;
+        min-height: 200px;
+        padding: 24px;
+    }
+
+    .gallery-cell p {
+        font-size: 18px;
+    }
+}
