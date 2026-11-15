@@ -5,12 +5,27 @@
 }
 
 .testimonials h1 {
-    margin: 0 0 32px;
+    margin: 0 0 12px;
     color: #42464D;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 32px;
     font-weight: 400;
     text-align: center;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin: 0 0 32px;
+}
+
+.rating-stars img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .gallery {

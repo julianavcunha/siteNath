@@ -1,0 +1,159 @@
+.services-page {
+    width: min(1050px, calc(100% - 48px));
+    margin: 86px auto 0;
+    padding-bottom: 48px;
+}
+
+.services-page h1 {
+    margin: 0 0 32px;
+    color: #42464D;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.services-page h2 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 32px;
+}
+
+.service-tabs {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.service-tabs input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.service-tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    max-width: 100%;
+    padding: 2px;
+}
+
+.service-tab-list label {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    border-radius: 8px 8px 0 0;
+    background: rgba(222, 224, 227, 0.75);
+    color: #42464D;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.service-tabs input[type="radio"]:checked ~ .service-tab-list label {
+    background: rgba(222, 224, 227, 0.75);
+    box-shadow: none;
+}
+
+#service-brand-complete:checked ~ .service-tab-list #label-brand-complete,
+#service-logos:checked ~ .service-tab-list #label-logos,
+#service-packaging:checked ~ .service-tab-list #label-packaging,
+#service-advertising:checked ~ .service-tab-list #label-advertising,
+#service-video:checked ~ .service-tab-list #label-video,
+#service-presentations:checked ~ .service-tab-list #label-presentations,
+#service-ux-ui:checked ~ .service-tab-list #label-ux-ui,
+#service-print-design:checked ~ .service-tab-list #label-print-design,
+#service-signage:checked ~ .service-tab-list #label-signage {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 -3px #42464D;
+}
+
+#service-brand-complete:focus-visible ~ .service-tab-list #label-brand-complete,
+#service-logos:focus-visible ~ .service-tab-list #label-logos,
+#service-packaging:focus-visible ~ .service-tab-list #label-packaging,
+#service-advertising:focus-visible ~ .service-tab-list #label-advertising,
+#service-video:focus-visible ~ .service-tab-list #label-video,
+#service-presentations:focus-visible ~ .service-tab-list #label-presentations,
+#service-ux-ui:focus-visible ~ .service-tab-list #label-ux-ui,
+#service-print-design:focus-visible ~ .service-tab-list #label-print-design,
+#service-signage:focus-visible ~ .service-tab-list #label-signage {
+    outline: 2px solid #42464D;
+    outline-offset: 2px;
+}
+
+.service-panels {
+    width: 100%;
+}
+
+.service-panel {
+    display: none;
+    min-height: 180px;
+    padding: 28px;
+    border-radius: 0 0 8px 8px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #42464D;
+    font-family: 'Public Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.service-panel h2 {
+    margin: 0 0 12px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.service-panel p {
+    margin: 0;
+}
+
+#service-brand-complete:checked ~ .service-panels #panel-brand-complete,
+#service-logos:checked ~ .service-panels #panel-logos,
+#service-packaging:checked ~ .service-panels #panel-packaging,
+#service-advertising:checked ~ .service-panels #panel-advertising,
+#service-video:checked ~ .service-panels #panel-video,
+#service-presentations:checked ~ .service-panels #panel-presentations,
+#service-ux-ui:checked ~ .service-panels #panel-ux-ui,
+#service-print-design:checked ~ .service-panels #panel-print-design,
+#service-signage:checked ~ .service-panels #panel-signage {
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .services-page {
+        margin-top: 40px;
+    }
+
+    .services-page h1 {
+        font-size: 28px;
+    }
+
+    .service-tab-list label {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
+    .service-panel {
+        padding: 22px;
+    }
+}

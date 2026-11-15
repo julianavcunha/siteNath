@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Site Nathalia - Serviços</title> <!-- ver com Nath qual vai ser o título -->
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="services.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -49,6 +50,84 @@
                     </div>
                 </div>
             </header>
+
+            <main class="services-page">
+                <h1>Serviços</h1>
+                <h2>Conheça a ampla variedade de soluções de design para seu negócio:</h2>
+                <fieldset class="service-tabs">
+                    <legend class="visually-hidden">Escolha uma categoria de serviço</legend>
+
+                    <input type="radio" name="service-category" id="service-brand-complete" checked>
+                    <input type="radio" name="service-category" id="service-logos">
+                    <input type="radio" name="service-category" id="service-packaging">
+                    <input type="radio" name="service-category" id="service-advertising">
+                    <input type="radio" name="service-category" id="service-video">
+                    <input type="radio" name="service-category" id="service-presentations">
+                    <input type="radio" name="service-category" id="service-ux-ui">
+                    <input type="radio" name="service-category" id="service-print-design">
+                    <input type="radio" name="service-category" id="service-signage">
+
+                    <div class="service-tab-list">
+                        <label id="label-brand-complete" for="service-brand-complete">Marca Completa</label>
+                        <label id="label-logos" for="service-logos">Logotipos</label>
+                        <label id="label-packaging" for="service-packaging">Embalagens</label>
+                        <label id="label-advertising" for="service-advertising">Design publicitário</label>
+                        <label id="label-video" for="service-video">Edição de vídeo</label>
+                        <label id="label-presentations" for="service-presentations">Apresentações</label>
+                        <label id="label-ux-ui" for="service-ux-ui">Experiência do usuário e Interface (UX/UI)</label>
+                        <label id="label-print-design" for="service-print-design">Design de impressão</label>
+                        <label id="label-signage" for="service-signage">Sinalização</label>
+                    </div>
+
+                    <div class="service-panels">
+                        <section class="service-panel" id="panel-brand-complete" aria-labelledby="label-brand-complete">
+                            <h2>Espaço para ícone</h2>
+                            <p>Logotipo, paleta de cores, símbolo/s, papelaria corporativa, modelos para redes sociais, template de apresentações, manual da marca, site e aplicativo*.</p>
+                            <footer><cite>*Com base na conversa sobre as necessidades do cliente.</cite></footer>
+                        </section>
+
+                        <section class="service-panel" id="panel-logos" aria-labelledby="label-logos">
+                            <h2>Logotipos</h2>
+                            <p>Escolha de tipografia, ou desenvolvimento de tipografia, símbolos e paleta de cores.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-packaging" aria-labelledby="label-packaging">
+                            <h2>Embalagens</h2>
+                            <p>Sacolas de papel, caixas personalizadas, adesivos, lacres de segurança.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-advertising" aria-labelledby="label-advertising">
+                            <h2>Design publicitário</h2>
+                            <p>Adicione aqui o texto deste serviço.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-video" aria-labelledby="label-video">
+                            <h2>Edição de vídeo</h2>
+                            <p>Adicione aqui o texto deste serviço.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-presentations" aria-labelledby="label-presentations">
+                            <h2>Apresentações</h2>
+                            <p>Adicione aqui o texto deste serviço.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-ux-ui" aria-labelledby="label-ux-ui">
+                            <h2>Experiência do usuário e Interface (UX/UI)</h2>
+                            <p>Adicione aqui o texto deste serviço.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-print-design" aria-labelledby="label-print-design">
+                            <h2>Design de impressão</h2>
+                            <p>Adicione aqui o texto deste serviço.</p>
+                        </section>
+
+                        <section class="service-panel" id="panel-signage" aria-labelledby="label-signage">
+                            <h2>Sinalização</h2>
+                            <p>Adicione aqui o texto deste serviço.</p>
+                        </section>
+                    </div>
+                </fieldset>
+            </main>
         </div>
     </body>
 </html>
