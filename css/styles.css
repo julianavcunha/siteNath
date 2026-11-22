@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+    --hover-color: #526A78;
+}
+
 *,
 *::before,
 *::after {
@@ -16,7 +20,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #fff;
-    background-image: url("imagens/background.jpg");
+    background-image: url("../imagens/background.jpg");
     background-size: cover;
     color: #42464D;
     font-family: 'Public Sans', sans-serif;
@@ -45,11 +49,14 @@ body::before {
 }
 
 header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 130px;
+    background-color: rgba(222, 224, 227, 0.85);
 }
 
 .logo {
@@ -112,7 +119,7 @@ header {
 
 .navlang ol li a {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 3px;
     color: inherit;
     text-decoration: none;
@@ -127,7 +134,7 @@ header {
 .contrast a {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 2px;
     color: #42464D;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 11px;
@@ -210,6 +217,28 @@ header {
 .icon-links #lattes {
     width: 16px;
     height: 20px;
+}
+
+a:hover,
+.navbar li a:hover,
+label[for]:hover {
+    color: var(--hover-color);
+}
+
+a,
+button,
+label[for] {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-links a:hover {
+    outline: 2px solid var(--hover-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+button:hover {
+    color: var(--hover-color);
 }
 
 @media (max-width: 1200px) {

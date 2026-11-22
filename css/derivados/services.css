@@ -70,6 +70,11 @@
     white-space: nowrap;
 }
 
+.service-tab-list label:hover {
+    background: rgba(82, 106, 120, 0.12);
+    color: var(--hover-color);
+}
+
 .service-tabs input[type="radio"]:checked ~ .service-tab-list label {
     background: rgba(222, 224, 227, 0.75);
     box-shadow: none;
@@ -125,6 +130,17 @@
 
 .service-panel p {
     margin: 0;
+    text-align: center;
+    text-justify: auto;
+}
+
+#panel-print-design p + p {
+    margin-top: 16px;
+}
+
+.service-panel footer {
+    margin: 0;
+    text-align: center;
 }
 
 #service-brand-complete:checked ~ .service-panels #panel-brand-complete,
